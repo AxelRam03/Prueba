@@ -1,79 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Iniciar Sesión</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="Imdec.png">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
-    body {
-      background-color: #fffaf2;
-      color: #7B767A;
-    }
-
-    .btn-custom {
-      background-color: #E3268B;
-      border-color: #E3268B;
-      color: white;
-    }
-
-    .brand-icon {
-      font-size: 2rem;
-      color: #E3268B;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 100px;
-      height: auto;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="CAPITAL HOOD — Barbería urbana. Cortes, fades y barba.">
+<title>CAPITAL HOOD — Barbería</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Oswald:wght@500;700&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#090909;color:#f5f0e8;font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:20;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{height:76px;border-bottom:1px solid #292929;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;position:sticky;top:0;z-index:10;background:#090909ee;backdrop-filter:blur(10px)}
+.logo{font:700 24px Oswald;letter-spacing:2px}.logo i{font-style:normal;color:#c91625;margin:0 4px}nav .links{display:flex;gap:28px;align-items:center;font-size:11px;text-transform:uppercase;letter-spacing:1.5px}.links a:hover{color:#d21a29}.book{background:#c91625;padding:13px 19px;font-weight:700}.hamb{display:none;background:none;border:0;color:white;font-size:28px}
+.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:7vw 8vw;border-bottom:1px solid #292929;overflow:hidden}.eyebrow{font-size:10px;letter-spacing:3px;color:#999;text-transform:uppercase;font-weight:700}.eyebrow:before{content:"";display:inline-block;width:28px;height:2px;background:#c91625;margin:0 10px 3px 0}.hero h1{font:normal clamp(86px,13vw,190px)/.78 'Bebas Neue';letter-spacing:-2px;margin:25px 0}.red{color:#c91625}.hero p{color:#aaa;line-height:1.7}.actions{display:flex;gap:25px;align-items:center;margin-top:35px}.btn{display:inline-flex;gap:25px;padding:16px 22px;font-size:10px;letter-spacing:2px;font-weight:700}.btn.redbtn{background:#c91625}.under{border-bottom:1px solid #555;padding-bottom:6px;font-size:10px;letter-spacing:2px}
+.poster{height:530px;position:relative;display:grid;place-items:center}.poster h2{font:normal 170px/.72 'Bebas Neue';transform:rotate(-7deg);text-align:center;margin:0}.poster h2 span{color:#c91625}.circle{position:absolute;width:430px;height:430px;border:1px solid #333;border-radius:50%}.mark{position:absolute;right:2%;top:9%;border:1px solid #c91625;border-radius:50%;width:86px;height:86px;display:grid;place-items:center;text-align:center;font:11px Oswald;transform:rotate(12deg)}.slash{position:absolute;width:280px;height:13px;background:#c91625;right:-5%;bottom:23%;transform:rotate(-9deg)}
+section{padding:105px 8vw}.manifesto{display:grid;grid-template-columns:90px 1fr 1fr;gap:30px;align-items:end}.num{font:36px 'Bebas Neue';color:#c91625}.manifesto h2,.head h2,.why h2,.location h2{font:normal clamp(65px,8vw,115px)/.8 'Bebas Neue';margin:0}.copy{color:#999;line-height:1.8;max-width:420px}
+.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:60px}.head>p{max-width:280px;color:#888;font-size:13px;line-height:1.7}.services{border-top:1px solid #292929}.service{display:grid;grid-template-columns:60px 1fr 120px 100px;gap:20px;align-items:center;padding:27px 0;border-top:1px solid #292929}.service:last-child{border-bottom:1px solid #292929}.service b{color:#c91625;font:28px 'Bebas Neue'}.service h3{font:26px Oswald;margin:0 0 7px}.service p{margin:0;color:#888;font-size:13px}.price{font:35px 'Bebas Neue';text-align:right}.reserve{background:none;border:0;color:#eee;font-size:10px;letter-spacing:1.5px;cursor:pointer}.featured{background:#c91625;padding:27px 18px;margin:0 -18px}.featured b,.featured .price{color:white}
+.campaign{background:#c91625;position:relative;overflow:hidden}.campaign h2{font:normal clamp(80px,12vw,175px)/.76 'Bebas Neue';margin:20px 0 45px}.campaign .light{background:#f5f0e8;color:#090909}.campaign:after{content:"CH";position:absolute;right:5%;top:0;font:250px 'Bebas Neue';opacity:.08}
+.gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:300px 300px;gap:12px}.pic{background:linear-gradient(135deg,#292929,#0d0d0d 65%,#470b12);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:25px}.pic:after{content:"";position:absolute;inset:15%;border:1px solid #666;transform:rotate(-8deg)}.pic span{position:relative;z-index:1;font:38px 'Bebas Neue';letter-spacing:2px}.big{grid-row:span 2;background:linear-gradient(150deg,#343434,#0b0b0b 55%,#5a0e17)}
+.dark{background:#f5f0e8;color:#0a0a0a;display:grid;grid-template-columns:1fr 1fr;gap:8vw}.dark .eyebrow{color:#555}.dark h2{font:normal clamp(60px,8vw,110px)/.8 'Bebas Neue';margin:15px 0}.stats{display:grid;grid-template-columns:1fr 1fr}.stat{border-top:1px solid #bbb;padding:35px 0}.stat strong{font:85px 'Bebas Neue';color:#c91625;display:block}.stat span{font-size:10px;letter-spacing:2px}
+.why{border-top:1px solid #292929}.why h2{margin:15px 0 60px}.whygrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #292929}.whygrid div{padding:30px 20px 20px 0;border-right:1px solid #292929}.whygrid div+div{padding-left:20px}.whygrid b{color:#c91625}.whygrid h3{font:24px/1 Oswald;margin-top:55px}
+.booking{border-top:1px solid #292929;display:grid;grid-template-columns:1fr 1fr;gap:8vw}.booking h2{font:normal clamp(70px,9vw,125px)/.78 'Bebas Neue';margin:15px 0}.form{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-content:center}.form label{font-size:10px;color:#888;letter-spacing:1.5px;text-transform:uppercase}.form input,.form select{width:100%;background:none;border:0;border-bottom:1px solid #444;color:#eee;padding:12px 0;margin-top:8px;outline:none}.form select option{color:#111}.form button{border:0;cursor:pointer;grid-column:1/-1}.note{grid-column:1/-1;color:#666;font-size:10px}
+.location{border-top:1px solid #292929;display:grid;grid-template-columns:1fr 1fr;gap:50px}.location p{color:#888;line-height:1.8;font-size:13px}.map{grid-column:1/-1;height:220px;border:1px solid #333;display:grid;place-items:center;background:repeating-linear-gradient(135deg,#0a0a0a,#0a0a0a 18px,#111 18px,#111 19px)}.map strong{font:65px 'Bebas Neue';color:#c91625}
+.final{text-align:center;background:#c91625}.final h2{font:normal clamp(75px,11vw,155px)/.76 'Bebas Neue';margin:20px 0 45px}.final em{font-style:normal;color:#090909}.final .light{background:#f5f0e8;color:#090909}
+footer{padding:45px 8vw;border-top:1px solid #292929;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:20px}footer p,footer small{color:#666;font-size:10px;letter-spacing:1.5px}footer .social{display:flex;gap:20px;justify-content:flex-end;font-size:10px}.wa{position:fixed;right:20px;bottom:20px;background:#25d366;color:#05200c;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:700;z-index:30}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s}.show{opacity:1;transform:none}
+@media(max-width:800px){nav{height:68px;padding:0 5vw}.hamb{display:block}.links{display:none!important}.open .links{display:flex!important;position:absolute;top:68px;left:0;right:0;background:#090909;flex-direction:column;align-items:stretch;padding:20px 7vw;border-bottom:1px solid #292929}.open .links a{padding:12px 0}.hero{display:block;padding:75px 7vw}.hero h1{font-size:25vw}.poster{height:340px}.poster h2{font-size:34vw}.circle{width:300px;height:300px}.slash{width:190px}.manifesto,.dark,.booking,.location{display:block;padding:80px 7vw}.manifesto{display:grid;grid-template-columns:50px 1fr}.manifesto .copy{grid-column:2}.head{display:block}.head>p{margin-top:25px}.services{padding:80px 7vw}.service{grid-template-columns:45px 1fr;gap:8px}.price,.reserve{grid-column:2;text-align:left}.featured{margin:0 -8px;padding:27px 8px}.campaign{padding:90px 7vw}.gallery{grid-template-columns:1fr;grid-template-rows:300px 210px 210px 210px}.big{grid-row:auto}.dark h2,.why h2,.location h2{font-size:19vw}.stats{margin-top:50px}.why{padding:80px 7vw}.whygrid{grid-template-columns:1fr 1fr}.whygrid div{padding:25px 10px 25px 0}.whygrid div+div{padding-left:15px}.whygrid h3{font-size:19px}.booking h2{font-size:20vw}.form{margin-top:45px}.location .map{margin-top:40px}.final{padding:90px 7vw}footer{grid-template-columns:1fr;padding:40px 7vw}.social{justify-content:flex-start!important;flex-wrap:wrap}.wa{width:52px;height:52px}}
+</style>
 </head>
 <body>
-
-  <!-- Logo en la esquina superior izquierda -->
-  <img src="Imdec.png" alt="Logo de la empresa" class="logo">
-
-  <div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
-      <div class="text-center mb-4">
-        <i class="fas fa-user-circle brand-icon"></i>
-        <h2 class="mt-2">Iniciar Sesión</h2>
-      </div>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="password" placeholder="Contraseña">
-        </div>
-        <button type="submit" class="btn btn-custom w-100">Entrar</button>
-      </form>
-      <div class="text-center mt-3">
-        <a href="register.html" class="text-decoration-none">¿No tienes cuenta? Regístrate</a>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
-<?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
-echo "<h1>Bienvenido al sistema IMDEC</h1>";
-echo "<p><a href='logout.php'>Cerrar sesión</a></p>";
-?>
+<nav id="nav"><a class="logo" href="#inicio">CAPITAL<i>×</i>HOOD</a><button class="hamb" aria-label="Menú">☰</button><div class="links"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#nosotros">Nosotros</a><a href="#ubicacion">Ubicación</a><a class="book" href="#reserva">Reservar</a></div></nav>
+<main>
+<section id="inicio" class="hero"><div><p class="eyebrow">BARBER SHOP · CDMX</p><h1>CAPITAL<br><span class="red">HOOD.</span></h1><p>Cortes precisos. Barba impecable.<br>Estilo que habla por ti.</p><div class="actions"><a class="btn redbtn" href="#reserva">RESERVAR CITA ↗</a><a class="under" href="#servicios">VER SERVICIOS</a></div></div><div class="poster"><div class="circle"></div><h2>CAPITAL<br><span>HOOD</span></h2><div class="mark">EST.<br>2026</div><div class="slash"></div></div></section>
+<section class="manifesto reveal"><div class="num">01</div><div><p class="eyebrow">NUESTRO TRABAJO</p><h2>NO ES SOLO<br><span class="red">UN CORTE.</span></h2></div><p class="copy">Cada detalle importa. Desde el primer movimiento de la máquina hasta el último acabado. Aquí tu estilo no sale de una plantilla.</p></section>
+<section id="servicios" class="services"><div class="head reveal"><div><p class="eyebrow">02 / SERVICIOS</p><h2>TU ESTILO<br><span class="red">EMPIEZA AQUÍ.</span></h2></div><p>Elige tu servicio. Nosotros hacemos el resto.</p></div>
+<div class="service reveal"><b>01</b><div><h3>CORTE CLÁSICO</h3><p>Corte personalizado y acabado profesional.</p></div><span class="price">$250</span><button class="reserve">RESERVAR ↗</button></div>
+<div class="service reveal"><b>02</b><div><h3>FADE</h3><p>Degradado limpio, preciso y personalizado.</p></div><span class="price">$300</span><button class="reserve">RESERVAR ↗</button></div>
+<div class="service featured reveal"><b>03</b><div><h3>CORTE + BARBA</h3><p>Servicio completo para renovar tu estilo.</p></div><span class="price">$400</span><button class="reserve">RESERVAR ↗</button></div>
+<div class="service reveal"><b>04</b><div><h3>BARBA</h3><p>Perfilado, diseño y acabado profesional.</p></div><span class="price">$180</span><button class="reserve">RESERVAR ↗</button></div></section>
+<section class="campaign reveal"><p class="eyebrow">03 / CAMPAÑA</p><h2>NO SIGAS<br>EL ESTILO.<br><span>CREA EL TUYO.</span></h2><a class="btn light" href="#reserva">RESERVAR AHORA ↗</a></section>
+<section id="trabajos"><div class="head reveal"><div><p class="eyebrow">04 / TRABAJOS</p><h2>TRABAJOS QUE<br><span class="red">HABLAN.</span></h2></div><p>Espacio preparado para fotografías reales de la barbería.</p></div><div class="gallery"><div class="pic big reveal"><span>FADE</span></div><div class="pic reveal"><span>DETAIL</span></div><div class="pic reveal"><span>BEARD</span></div></div></section>
+<section id="nosotros" class="dark reveal"><div><p class="eyebrow">05 / EXPERIENCIA</p><h2>ENTRA COMO CLIENTE.<br><span> SAL COMO LEYENDA.</span></h2><p class="copy">Un espacio para desconectar, sentarte y salir con un estilo completamente tuyo.</p></div><div class="stats"><div class="stat"><strong>+500</strong><span>CLIENTES</span></div><div class="stat"><strong>+5</strong><span>AÑOS</span></div><div class="stat"><strong>100%</strong><span>ESTILO</span></div></div></section>
+<section class="why reveal"><p class="eyebrow">06 / POR QUÉ NOSOTROS</p><h2>DETALLES QUE<br><span class="red">SE NOTAN.</span></h2><div class="whygrid"><div><b>01</b><h3>BARBEROS<br>PROFESIONALES</h3></div><div><b>02</b><h3>ATENCIÓN<br>PERSONALIZADA</h3></div><div><b>03</b><h3>HERRAMIENTAS<br>SANITIZADAS</h3></div><div><b>04</b><h3>PRODUCTOS<br>PROFESIONALES</h3></div></div></section>
+<section id="reserva" class="booking"><div><p class="eyebrow">07 / RESERVA</p><h2>¿LISTO PARA<br>TU PRÓXIMO<br><span class="red">CORTE?</span></h2><p class="copy">Agenda en minutos. También puedes escribirnos directamente por WhatsApp.</p></div><form class="form" id="form"><label>Servicio<select required><option value="">Selecciona</option><option>Fade</option><option>Corte clásico</option><option>Corte + barba</option><option>Barba</option></select></label><label>Nombre<input required placeholder="Tu nombre"></label><label>Fecha<input required type="date"></label><label>Hora<select required><option value="">Selecciona</option><option>10:00</option><option>12:00</option><option>14:00</option><option>16:00</option><option>18:00</option><option>20:00</option></select></label><button class="btn redbtn" type="submit">SOLICITAR CITA ↗</button><small class="note">Demo: conecta este formulario con el sistema real de reservaciones.</small></form></section>
+<section id="ubicacion" class="location reveal"><div><p class="eyebrow">08 / VISÍTANOS</p><h2>ENCUÉNTRANOS<br><span class="red">EN LA CIUDAD.</span></h2></div><div><p><b>DIRECCIÓN</b><br>[Dirección del cliente]</p><p><b>HORARIOS</b><br>Lun — Sáb · 10:00 — 20:00</p><p><b>INSTAGRAM</b><br>@capitalhood.barber</p></div><div class="map"><strong>MAPA</strong></div></section>
+<section class="final reveal"><p class="eyebrow">CAPITAL HOOD</p><h2>TU PRÓXIMO CORTE<br><em>EMPIEZA AQUÍ.</em></h2><a class="btn light" href="#reserva">RESERVAR CITA ↗</a></section>
+</main>
+<footer><a class="logo" href="#inicio">CAPITAL<i>×</i>HOOD</a><p>CORTES QUE HABLAN POR TI.</p><div class="social"><a href="#ubicacion">INSTAGRAM</a><a href="#reserva">WHATSAPP</a><a href="#servicios">SERVICIOS</a></div><small>© 2026 CAPITAL HOOD</small></footer>
+<a class="wa" href="https://wa.me/5210000000000?text=Hola%2C%20quiero%20agendar%20una%20cita." target="_blank" aria-label="WhatsApp">WA</a>
+<script>
+const n=document.getElementById('nav'),h=document.querySelector('.hamb');h.onclick=()=>n.classList.toggle('open');
+const o=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
+document.querySelectorAll('.reserve').forEach(x=>x.onclick=()=>location.hash='reserva');
+document.getElementById('form').onsubmit=e=>{e.preventDefault();window.open('https://wa.me/5210000000000?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Capital%20Hood.','_blank')};
+</script>
+</body></html>
